@@ -20,9 +20,9 @@ function Banner() {
     fetchData();
   }, []);
 
-  //console.log(movie);
+  console.log("the movie display", movie);
   function truncate(string, n) {
-    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+    return string?.length > n ? string.substr(0, n - 1) + "...[more]" : string;
   }
 
   return (
@@ -37,7 +37,8 @@ function Banner() {
     >
       <div className="banner_contents">
         <h1 className="banner_title">
-          {movie?.title || movie?.name || movie?.originanl_name}
+          {movie?.title || movie?.name || movie?.originanl_name}{" "}
+          <span className="banner_movieYear">{movie?.release_date}</span>
         </h1>
         <div className="banner_buttons">
           <button className="banner_button">Play</button>
@@ -46,6 +47,7 @@ function Banner() {
 
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
       </div>
+      <div className="banner--fadeLeft" />
       <div className="banner--fadeBottom" />
     </header>
   );

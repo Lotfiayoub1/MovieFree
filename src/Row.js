@@ -26,10 +26,10 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
           (movie) =>
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
-              <div>
+              <div key={movie.id}>
                 <img
-                  className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                   key={movie.id}
+                  className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                   src={`${base_url}${
                     isLargeRow ? movie.poster_path : movie.backdrop_path
                   }`}
