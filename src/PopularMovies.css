@@ -1,4 +1,78 @@
-.popularMovies h2 {
+.popularMovies {
   color: white;
   margin-left: 20px;
+}
+.popularMovies_poster2 {
+  max-height: 250px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 450ms;
+  border-radius: 20px;
+}
+.popularMovies_poster2:hover {
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+.popularMovies_poster::-webkit-scrollbar {
+  width: 0;
+}
+.popularMovies_poster {
+  flex: 0.6;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.popularMovies_posters {
+  display: flex;
+}
+.popularMovies_names {
+  flex: 0.5;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 20px;
+  height: 250px;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(74, 148, 117)
+  );
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(-50px);
+}
+
+.popularMovies_names div {
+  display: flex;
+  margin-left: 100px;
+  transform: translateY(25px);
+}
+.popularMovies_genre {
+  color: #111;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0px 5px;
+  background-color: white;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateX(15px);
+}
+.popularMovies_genre:hover {
+  background-color: #65b3a6;
+  color: white;
+  transition: all 0.5s;
+}
+.popularMovies_effect {
+  width: 4rem;
+  margin-top: 20px;
+  height: 250px;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #111);
+
+  transform: translateX(-40px);
 }

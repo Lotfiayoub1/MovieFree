@@ -30,7 +30,7 @@ function PopularMovies({ title, fetchUrl, isLargeRow = false }) {
                 <div key={movie.id}>
                   <img
                     key={movie.id}
-                    className={`popularMovies_poster ${
+                    className={`popularMovies_poster2 ${
                       isLargeRow && "popularMovies_posterLarge"
                     }`}
                     src={`${base_url}${
@@ -47,9 +47,33 @@ function PopularMovies({ title, fetchUrl, isLargeRow = false }) {
               )
           )}
         </div>
+        <div className="popularMovies_effect" />
         <div className="popularMovies_names">
-          <p>toto</p>
-          <p>animation</p>
+          <div>
+            <p className="popularMovies_genre">ADVENTURE</p>
+            <p className="popularMovies_genre">ACTION</p>
+            <p className="popularMovies_genre">ANIMATION</p>
+          </div>
+
+          <div>
+            <p className="popularMovies_genre">COMEDY</p>
+            <p className="popularMovies_genre">CRIME</p>
+            <p className="popularMovies_genre">DRAMA</p>
+            <p className="popularMovies_genre">FAMILY</p>
+          </div>
+
+          <div>
+            <p className="popularMovies_genre">FANTASY</p>
+            <p className="popularMovies_genre">HISTORY</p>
+            <p className="popularMovies_genre">HORROR</p>
+            <p className="popularMovies_genre">MUSIC</p>
+          </div>
+
+          <div>
+            <p className="popularMovies_genre">ROMANCE</p>
+            <p className="popularMovies_genre">SCIENCE FICTION</p>
+            <p className="popularMovies_genre">THRILLER</p>
+          </div>
         </div>
       </div>
     </div>
